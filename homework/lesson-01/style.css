@@ -50,6 +50,7 @@ a:hover {
   padding: 0px 80px;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
 }
 .product {
   margin: 10px;
