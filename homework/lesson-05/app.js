@@ -41,14 +41,10 @@ function greeting(a) {
   for (let i = 0; i < key.length; i++) {
     if (a == key[i]) {
       temp = true;
-      if (temp == true) {
-        console.log(`\"Hi! I\'m ${a}, and I\'m from ${value[i]}.\"`);
-      }
+      console.log(`\"Hi! I\'m ${a}, and I\'m from ${value[i]}.\"`);
     }
   }
-  if (temp == false) {
-    console.log('"Hi! I\'m a guest."');
-  }
+  if (temp != true) console.log('"Hi! I\'m a guest."');
 }
 greeting("Moti");
 // code cũ
