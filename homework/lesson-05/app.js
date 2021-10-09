@@ -35,21 +35,39 @@ const GUEST_LIST = {
   Sam: "Argentina",
 };
 function greeting(a) {
-  if (a == "Randy") {
-    console.log(`\"Hi! I\'m ${a}, and I\'m from ${GUEST_LIST.Randy}.\"`);
-  } else if (a == "Karla") {
-    console.log(`\"Hi! I\'m ${a}, and I\'m from ${GUEST_LIST.Karla}.\"`);
-  } else if (a == "Wendy") {
-    console.log(`\"Hi! I\'m ${a}, and I\'m from ${GUEST_LIST.Wendy}.\"`);
-  } else if (a == "Norman") {
-    console.log(`\"Hi! I\'m ${a}, and I\'m from ${GUEST_LIST.Norman}.\"`);
-  } else if (a == "Sam") {
-    console.log(`\"Hi! I\'m ${a}, and I\'m from ${GUEST_LIST.Sam}.\"`);
-  } else {
+  let key = Object.keys(GUEST_LIST);
+  let temp = false;
+  let value = Object.values(GUEST_LIST);
+  for (let i = 0; i < key.length; i++) {
+    if (a == key[i]) {
+      temp = true;
+      if (temp == true) {
+        console.log(`\"Hi! I\'m ${a}, and I\'m from ${value[i]}.\"`);
+      }
+    }
+  }
+  if (temp == false) {
     console.log('"Hi! I\'m a guest."');
   }
 }
-greeting("Sam");
+greeting("Moti");
+// code cũ
+// function greeting(a) {
+//   if (a == "Randy") {
+//     console.log(`\"Hi! I\'m ${a}, and I\'m from ${GUEST_LIST.Randy}.\"`);
+//   } else if (a == "Karla") {
+//     console.log(`\"Hi! I\'m ${a}, and I\'m from ${GUEST_LIST.Karla}.\"`);
+//   } else if (a == "Wendy") {
+//     console.log(`\"Hi! I\'m ${a}, and I\'m from ${GUEST_LIST.Wendy}.\"`);
+//   } else if (a == "Norman") {
+//     console.log(`\"Hi! I\'m ${a}, and I\'m from ${GUEST_LIST.Norman}.\"`);
+//   } else if (a == "Sam") {
+//     console.log(`\"Hi! I\'m ${a}, and I\'m from ${GUEST_LIST.Sam}.\"`);
+//   } else {
+//     console.log('"Hi! I\'m a guest."');
+//   }
+// }
+// greeting("Sam");
 function keysAndValues(a) {
   let box = [];
   let key = Object.keys(a);
