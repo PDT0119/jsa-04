@@ -11,14 +11,11 @@ console.log(inventory);
 
 function getBudgets(data) {
   let box = [];
-  let a = 0;
-  for (let i = 0; i < data.length; i++) {
-    let temp = data[i];
-    let budget = temp.budget;
-    budget = a + budget;
-    a = budget;
+  let sum = 0;
+  for (let people of data) {
+    sum += people.budget;
   }
-  return a;
+  return sum;
 }
 console.log(
   getBudgets([
@@ -37,16 +34,15 @@ const GUEST_LIST = {
 function greeting(a) {
   let key = Object.keys(GUEST_LIST);
   let temp = false;
-  let value = Object.values(GUEST_LIST);
   for (let i = 0; i < key.length; i++) {
     if (a == key[i]) {
       temp = true;
-      console.log(`\"Hi! I\'m ${a}, and I\'m from ${value[i]}.\"`);
+      console.log(`\"Hi! I\'m ${a}, and I\'m from ${GUEST_LIST[a]}.\"`);
     }
   }
-  if (temp != true) console.log('"Hi! I\'m a guest."');
+  if (temp !== true) console.log('"Hi! I\'m a guest."');
 }
-greeting("Moti");
+greeting("Sam");
 // code cũ
 // function greeting(a) {
 //   if (a == "Randy") {
