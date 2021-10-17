@@ -10,7 +10,6 @@ delete inventory.pouch;
 console.log(inventory);
 
 function getBudgets(data) {
-  let box = [];
   let sum = 0;
   for (let people of data) {
     sum += people.budget;
